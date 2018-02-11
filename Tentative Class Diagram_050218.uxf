@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>735</x>
+      <y>196</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Employee
+--
+#EmployeeID : String
++EFName : String
++ELName : String
+#ManagerNo : String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>406</y>
+      <w>140</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Stock
+--
+#stockID : String
+#stockDesc : String 
+#stockPrice : Double 
+#stockQuantity : Integer
+#stockCategory : String
+#stockSCategory : String
+--
+AddNewStock()
+RemoveStock()
+EditStockItem()
+
+DisplayAvailableStockAsc()
+DisplayAvailableStockDesc()
+DisplayStockPriceRange()
+DisplayStockQuantityAsc()
+DisplayStockQuantityDesc()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>434</x>
+      <y>210</y>
+      <w>126</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>System
+--
+
+--
+EncryptPassword()
+DecryptPassword()
+LowStockAlert()
+ViewSummaryReport()
+EncryptData()
+DecryptData()
+LockRecord()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>210</y>
+      <w>133</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Record
+--
+#RecordID:String
+#StockID:String
+--
+AddRecord()
+UpdateRecord()
+RemoveRecord()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>266</x>
+      <y>336</y>
+      <w>70</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+Manages v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>21</y>
+      <w>133</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Summary Report
+--
+#RecordID
+--
+SelectDateRange()
+GenerateReport()
+DisplayDailyReport()
+DisplayWeeklyReport()
+DisplayMonthlyReport()
+DisplayYearlyReport()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>266</x>
+      <y>147</y>
+      <w>63</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=-
+retrieve v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>77</y>
+      <w>168</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+&lt; Access </panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0;220.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>336</x>
+      <y>238</y>
+      <w>112</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+&lt; Access </panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>588</x>
+      <y>301</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Login
+--
+-Username:String
+-Password:String
+--
+Logout()
+Authentication()
+DenyAccess()
+DisplayWrongInput()
+OptionToEncrypt()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>455</y>
+      <w>133</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Search Portal
+--
++SearchInput:String
+--
+SearchStock()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>343</x>
+      <y>497</y>
+      <w>112</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+&lt; Access </panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>385</y>
+      <w>63</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1
+ Access  v</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>812</x>
+      <y>49</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Warehouse Personnel
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>245</y>
+      <w>21</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>42</y>
+      <w>126</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Adminstrator
+--
+
+--
+UnlockAccount()
+CreateAccount()
+RemoveAccount()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>553</x>
+      <y>238</y>
+      <w>196</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+&lt; Access </panel_attributes>
+    <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>777</x>
+      <y>105</y>
+      <w>112</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;80.0;140.0;80.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>112</y>
+      <w>126</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;160.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>511</x>
+      <y>84</y>
+      <w>133</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-
+Manage v</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+</diagram>
